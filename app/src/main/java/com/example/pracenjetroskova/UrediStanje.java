@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -52,6 +53,11 @@ public class UrediStanje extends AppCompatActivity {
         DatabaseReference myRef = database.getReference(auth.getCurrentUser().getUid());
 
         stanje = (EditText) findViewById(R.id.NovoStanje);
+        if(TextUtils.isEmpty(stanje.getText().toString()))
+        {
+            stanje.setError("Niste unjeli stanje");
+            return;
+        }
 
 
         myRef.child("stanje").setValue(stanje.getText().toString());

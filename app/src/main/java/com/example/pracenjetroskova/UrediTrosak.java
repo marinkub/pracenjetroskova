@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -27,18 +28,6 @@ public class UrediTrosak extends AppCompatActivity {
     private EditText OpisTroska;
     String staritrosak;
     String kljuc;
-
-
-    public String NovoStanje(String trosak, String stanje)
-    {
-        String Novostanje;
-        Float fTrenutnoStanje = Float.parseFloat(stanje);
-        Float fTrosak = Float.parseFloat(trosak);
-        Float fNovoStanje = fTrenutnoStanje - fTrosak;
-        Novostanje = String.valueOf(fNovoStanje);
-
-        return Novostanje;
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -99,8 +88,23 @@ public class UrediTrosak extends AppCompatActivity {
     {
         TrenutnoStanje = (TextView) findViewById(R.id.textView5);
         uneseniTrosak = (EditText) findViewById(R.id.uneseniTrosak);
+        if(TextUtils.isEmpty(uneseniTrosak.getText().toString()))
+        {
+            uneseniTrosak.setError("Niste unjeli trošak");
+            return;
+        }
         NazivTroska = (EditText) findViewById(R.id.NazivTroška);
+        if(TextUtils.isEmpty(NazivTroska.getText().toString()))
+        {
+            NazivTroska.setError("Niste unjeli naziv troška");
+            return;
+        }
         OpisTroska = (EditText) findViewById(R.id.OpisTroška);
+        if(TextUtils.isEmpty(OpisTroska.getText().toString()))
+        {
+            OpisTroska.setError("Niste unjeli opis troška");
+            return;
+        }
 
         Float trenutnoStanje = Float.parseFloat(TrenutnoStanje.getText().toString());
         Float fStariTrosak = Float.parseFloat(staritrosak);
