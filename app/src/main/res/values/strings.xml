@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Pračenje toškova</string>
+    <string name="naslovTrenutnoStanje">Trenutno stanje</string>
+    <string name="stanje">stanje</string>
+    <string name="valuta">kn</string>
+    <string name="unesiTrosak">Unesi trošak</string>
+    <string name="povijest">Povijest troškova</string>
+    <string name="urediStanje">Uredi stanje</string>
+    <string name="odjava">Odjava</string>
+    <string name="pocetnoStnaje">Početno stanje</string>
+    <string name="unesi">Unesi</string>
+    <string name="prijava">Prijava</string>
+    <string name="email">E-mail</string>
+    <string name="lozinka">Lozinka</string>
+    <string name="registracija">Registracija</string>
+    <string name="izlaz">Izlaz</string>
+    <string name="naziv">Nazi:</string>
+    <string name="opis">Opis:</string>
+    <string name="trosak">Trošak:</string>
+    <string name="nazivTroska">Naziv troška</string>
+    <string name="opisTroska">Opis troška</string>
+    <string name="unesiStanje">Unesi stanje</string>
+    <string name="spremi">Spremi</string>
+    <string name="urediTrosak">Uredi trošak</string>
+</resources>
