@@ -95,6 +95,7 @@ public class UnesiTrosak extends AppCompatActivity {
             uneseniTrosak.setError("Niste unjeli trošak");
             return;
         }
+
         NazivTroska = (EditText) findViewById(R.id.NazivTroška);
         if(TextUtils.isEmpty(NazivTroska.getText().toString()))
         {
